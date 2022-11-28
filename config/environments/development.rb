@@ -38,6 +38,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  # deviseでのメールアドレスの確認やパスワードリセットの際に記載されるURLの設定
   config.action_mailer.default_url_options = { host: ENV.fetch("DEFAULT_URL", 'localhost'), port: ENV.fetch("DEFAULT_PORT", 3000) }
 
   config.action_mailer.delivery_method = :letter_opener_web
