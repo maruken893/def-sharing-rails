@@ -23,7 +23,7 @@ COPY Gemfile.lock /myapp/Gemfile.lock
 
 RUN bundle install
 
-COPY packages.json yarn.lock ./
+COPY package.json yarn.lock ./
 RUN yarn install
 
 COPY . /myapp
