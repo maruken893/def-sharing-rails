@@ -19,5 +19,8 @@ module Myapp
       g.helper false
       g.test_framework :test_unit, fixture: false
     end
+
+    # formでエラーが出たとき、field_of_errorsクラスのdivが勝手に入る設定を切る
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
   end
 end

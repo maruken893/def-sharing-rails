@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     unlocks: 'users/unlocks'
   }
   root "home#index"
+
+  mount LetterOpnerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end
